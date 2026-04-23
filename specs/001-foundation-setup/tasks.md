@@ -130,7 +130,7 @@ Examples of foundational tasks (adjust based on your project):
 ### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 
 - [X] T027 [P] [US3] Add Spring Boot Starter Data JPA and MySQL dependencies to pom.xml
-- [ ] T028 [P] [US3] Create database connection test in src/test/java/com/example/shortflix/repository/
+- [X] T028 [P] [US3] Create database connection test in src/test/java/com/example/shortflix/repository/
 
 ### Implementation for User Story 3
 
@@ -142,9 +142,9 @@ Examples of foundational tasks (adjust based on your project):
 - [X] T034 [US3] Create basic entity class placeholder in src/main/java/com/example/shortflix/model/ (for future use)
 - [X] T035 [US3] Add @Entity annotation to placeholder class
 - [X] T036 [US3] Add @Id and @GeneratedValue annotations to ID field
-- [ ] T037 [US3] Create integration test for database connection in src/test/java/com/example/shortflix/repository/DatabaseConnectionTest.java
-- [ ] T038 [US3] Verify application starts without database connection errors
-- [ ] T039 [US3] Test basic repository operations (save, findById) work without throwing connection exceptions
+- [X] T037 [US3] Create integration test for database connection in src/test/java/com/example/shortflix/repository/DatabaseConnectionTest.java
+- [X] T038 [US3] Verify application starts without database connection errors
+- [X] T039 [US3] Test basic repository operations (save, findById) work without throwing connection exceptions
 
 **Checkpoint**: At this point, User Stories 1, 2 AND 3 should all work independently
 
