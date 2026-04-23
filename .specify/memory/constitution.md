@@ -1,50 +1,48 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report:
+- Version change: (initial) → 1.0.0
+- Modified principles: 
+  * [PRINCIPLE_1_NAME] → I. Layered Architecture with Separation of Concerns
+  * [PRINCIPLE_2_NAME] → II. Test-Driven Development (NON-NEGOTIABLE)
+  * [PRINCIPLE_3_NAME] → III. Security-First Approach
+  * [PRINCIPLE_4_NAME] → IV. Observability and Monitoring
+  * [PRINCIPLE_5_NAME] → V. Performance Consciousness
+- Added sections: Technology Stack and Constraints, Development Workflow and Quality Gates, Governance
+- Removed sections: None (all template sections replaced with content)
+- Templates requiring updates:
+  * .specify/templates/plan-template.md: ✅ updated (Constitution Check section)
+  * .specify/templates/spec-template.md: ⚠ pending (references to [PRINCIPLE_X_NAME] and [SECTION_X_NAME] placeholders)
+  * .specify/templates/tasks-template.md: ⚠ pending (references to constitution principles)
+  * .specify/templates/commands/*.md: ⚠ pending (no command templates found)
+- Follow-up TODOs: Update template files to reflect new constitution principles
+-->
+# Shortflix Constitution
+<!-- Constitution for Shortflix Spring Boot Backend -->
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Layered Architecture with Separation of Concerns
+Follow clean layered architecture: Controller → Service → Repository. Each layer has distinct responsibilities: Controllers handle HTTP requests/responses, Services contain business logic, Repositories manage data persistence. No layer should skip another or contain concerns from other layers.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Test-Driven Development (NON-NEGOTIABLE)
+All development follows TDD: Write failing tests first, then implement minimal code to pass, then refactor. Tests must cover unit, integration, and API levels. No feature is complete without comprehensive tests that are reviewed and approved.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Security-First Approach
+Implement security at every level: Use JWT for authentication, BCrypt for password hashing, validate all inputs, protect endpoints appropriately, and never expose internal errors or stack traces to clients. Security considerations must be addressed in every phase.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Observability and Monitoring
+Build in observability from the start: Structured logging, meaningful metrics, health check endpoints, and proper error handling. Systems must be debuggable in production without requiring redeployment or excessive debugging sessions.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Performance Consciousness
+Consider performance implications in design: Use appropriate caching strategies, database indexing, connection pooling, and efficient queries. Premature optimization is avoided, but performance requirements are considered during architecture and implementation.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technology Stack and Constraints
+Use Spring Boot 3.x with Java 17+, MySQL for persistence, and JWT for authentication. Follow RESTful API design principles with proper HTTP status codes. All dependencies must be managed through Maven. Local file storage is acceptable for MVP with path to cloud storage migration.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow and Quality Gates
+Follow the 10-phase implementation plan strictly. Each phase must have corresponding specs written before implementation. Code reviews require approval from at least one other developer. All changes must be accompanied by updated tests. CI/CD pipeline must pass before merging to main branch.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution supersedes all other practices and guidelines within the project. Amendments require proper documentation, review approval, and a migration plan if breaking changes are introduced. All PRs and reviews must verify compliance with these principles. Complexity in implementation must be justified and reviewed.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-04-23 | **Last Amended**: 2026-04-23
+<!-- Initial constitution setup for Shortflix Spring Boot Backend -->
