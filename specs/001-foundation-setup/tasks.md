@@ -47,10 +47,10 @@ description: "Task list for Foundation Setup feature implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize Java project with Spring Boot dependencies
-- [ ] T003 [P] Configure Maven build (pom.xml)
-- [ ] T004 [P] Set up basic directory structure (src/main/java, src/main/resources, src/test/java, src/test/resources)
+- [X] T001 Create project structure per implementation plan
+- [X] T002 Initialize Java project with Spring Boot dependencies
+- [X] T003 [P] Configure Maven build (pom.xml)
+- [X] T004 [P] Set up basic directory structure (src/main/java, src/main/resources, src/test/java, src/test/resources)
 
 ## Phase 2: Foundational (Blocking Prerequisites)
 
@@ -60,11 +60,11 @@ description: "Task list for Foundation Setup feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T005 Configure application properties (application.properties)
-- [ ] T006 [P] Set up logging configuration (logback-spring.xml or application.properties)
-- [ ] T007 Configure MySQL database connection settings
-- [ ] T008 Set up JPA and Hibernate configuration
-- [ ] T009 [P] Create basic exception handler structure
+- [X] T005 Configure application properties (application.properties)
+- [X] T006 [P] Set up logging configuration (logback-spring.xml or application.properties)
+- [X] T007 Configure MySQL database connection settings
+- [X] T008 Set up JPA and Hibernate configuration
+- [X] T009 [P] Create basic exception handler structure
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -80,17 +80,17 @@ Examples of foundational tasks (adjust based on your project):
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T010 [P] [US1] Create application main class (ShortflixApplication.java) in src/main/java/com/youssef/shortflix/
-- [ ] T011 [P] [US1] Create basic health check controller (HealthController.java) in src/main/java/com/youssef/shortflix/controller/
+- [X] T010 [P] [US1] Create application main class (ShortflixApplication.java) in src/main/java/com/example/shortflix/
+- [X] T011 [P] [US1] Create basic health check controller (HealthController.java) in src/main/java/com/example/shortflix/controller/
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create application main class with @SpringBootApplication annotation in src/main/java/com/youssef/shortflix/ShortflixApplication.java
-- [ ] T013 [P] [US1] Add Spring Boot Starter Web dependency to pom.xml
-- [ ] T014 [US1] Create basic REST controller with @RestController annotation in src/main/java/com/youssef/shortflix/controller/HealthController.java
-- [ ] T015 [US1] Add health check endpoint returning 200 OK status in HealthController.java
-- [ ] T016 [US1] Add validation that application starts on port 8080 (default or configured)
-- [ ] T017 [US1] Create integration test for application startup in src/test/java/com/youssef/shortflix/ShortflixApplicationTests.java
+- [X] T012 [P] [US1] Create application main class with @SpringBootApplication annotation in src/main/java/com/example/shortflix/ShortflixApplication.java
+- [X] T013 [P] [US1] Add Spring Boot Starter Web dependency to pom.xml
+- [X] T014 [US1] Create basic REST controller with @RestController annotation in src/main/java/com/example/shortflix/controller/HealthController.java
+- [X] T015 [US1] Add health check endpoint returning 200 OK status in HealthController.java
+- [X] T016 [US1] Add validation that application starts on port 8080 (default or configured)
+- [X] T017 [US1] Create integration test for application startup in src/test/java/com/example/shortflix/ShortflixApplicationTests.java
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -104,18 +104,18 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T018 [P] [US2] Create package structure directories for config, controller, service, repository
+- [X] T018 [P] [US2] Create package structure directories for config, controller, service, repository
 
 ### Implementation for User Story 2
 
-- [ ] T019 [P] [US2] Create config package directory in src/main/java/com/youssef/shortflix/
-- [ ] T020 [P] [US2] Create controller package directory in src/main/java/com/youssef/shortflix/
-- [ ] T021 [P] [US2] Create service package directory in src/main/java/com/youssef/shortflix/
-- [ ] T022 [P] [US2] Create repository package directory in src/main/java/com/youssef/shortflix/
-- [ ] T023 [US2] Create basic configuration class structure in src/main/java/com/youssef/shortflix/config/
-- [ ] T024 [US2] Create placeholder interface for service layer in src/main/java/com/youssef/shortflix/service/
-- [ ] T025 [US2] Create placeholder interface for repository layer in src/main/java/com/youssef/shortflix/repository/
-- [ ] T026 [US2] Verify separation of concerns by checking package dependencies
+- [X] T019 [P] [US2] Create config package directory in src/main/java/com/example/shortflix/
+- [X] T020 [P] [US2] Create controller package directory in src/main/java/com/example/shortflix/
+- [X] T021 [P] [US2] Create service package directory in src/main/java/com/example/shortflix/
+- [X] T022 [P] [US2] Create repository package directory in src/main/java/com/example/shortflix/
+- [X] T023 [US2] Create basic configuration class structure in src/main/java/com/example/shortflix/config/
+- [X] T024 [US2] Create placeholder interface for service layer in src/main/java/com/example/shortflix/service/
+- [X] T025 [US2] Create placeholder interface for repository layer in src/main/java/com/example/shortflix/repository/
+- [X] T026 [US2] Verify separation of concerns by checking package dependencies
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -129,20 +129,20 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T027 [P] [US3] Add Spring Boot Starter Data JPA and MySQL dependencies to pom.xml
-- [ ] T028 [P] [US3] Create database connection test in src/test/java/com/youssef/shortflix/repository/
+- [X] T027 [P] [US3] Add Spring Boot Starter Data JPA and MySQL dependencies to pom.xml
+- [ ] T028 [P] [US3] Create database connection test in src/test/java/com/example/shortflix/repository/
 
 ### Implementation for User Story 3
 
-- [ ] T029 [P] [US3] Add Spring Boot Starter Data JPA dependency to pom.xml
-- [ ] T030 [P] [US3] Add MySQL Connector/J dependency to pom.xml
-- [ ] T031 [US3] Configure database connection properties in application.properties (URL, username, password)
-- [ ] T032 [US3] Configure JPA properties (hibernate.dialect, hibernate.hbm2ddl.auto, etc.)
-- [ ] T033 [US3] Create basic repository interface extending JpaRepository in src/main/java/com/youssef/shortflix/repository/
-- [ ] T034 [US3] Create basic entity class placeholder in src/main/java/com/youssef/shortflix/model/ (for future use)
-- [ ] T035 [US3] Add @Entity annotation to placeholder class
-- [ ] T036 [US3] Add @Id and @GeneratedValue annotations to ID field
-- [ ] T037 [US3] Create integration test for database connection in src/test/java/com/youssef/shortflix/repository/DatabaseConnectionTest.java
+- [X] T029 [P] [US3] Add Spring Boot Starter Data JPA dependency to pom.xml
+- [X] T030 [P] [US3] Add MySQL Connector/J dependency to pom.xml
+- [X] T031 [US3] Configure database connection properties in application.properties (URL, username, password)
+- [X] T032 [US3] Configure JPA properties (hibernate.dialect, hibernate.hbm2ddl.auto, etc.)
+- [X] T033 [US3] Create basic repository interface extending JpaRepository in src/main/java/com/example/shortflix/repository/
+- [X] T034 [US3] Create basic entity class placeholder in src/main/java/com/example/shortflix/model/ (for future use)
+- [X] T035 [US3] Add @Entity annotation to placeholder class
+- [X] T036 [US3] Add @Id and @GeneratedValue annotations to ID field
+- [ ] T037 [US3] Create integration test for database connection in src/test/java/com/example/shortflix/repository/DatabaseConnectionTest.java
 - [ ] T038 [US3] Verify application starts without database connection errors
 - [ ] T039 [US3] Test basic repository operations (save, findById) work without throwing connection exceptions
 
@@ -154,15 +154,15 @@ Examples of foundational tasks (adjust based on your project):
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T040 [P] Add JavaDoc comments to main application class
-- [ ] T041 [P] Add configuration for connection pool settings (HikariCP)
-- [ ] T042 [P] Create README.md with build and run instructions
-- [ ] T043 [P] Add .gitignore file for Java/Maven projects
-- [ ] T044 [P] Add basic unit test for health check controller
-- [ ] T045 [P] Run mvn clean verify to ensure build works
-- [ ] T046 [P] Validate application can be started and stopped cleanly
-- [ ] T047 [P] Check that all layers (controller, service, repository) are properly separated
-- [ ] T048 [P] Ensure logging shows application startup and configuration loading
+- [X] T040 [P] Add JavaDoc comments to main application class
+- [X] T041 [P] Add configuration for connection pool settings (HikariCP)
+- [X] T042 [P] Create README.md with build and run instructions
+- [X] T043 [P] Add .gitignore file for Java/Maven projects
+- [X] T044 [P] Add basic unit test for health check controller
+- [X] T045 [P] Run mvn clean verify to ensure build works
+- [X] T046 [P] Validate application can be started and stopped cleanly
+- [X] T047 [P] Check that all layers (controller, service, repository) are properly separated
+- [X] T048 [P] Ensure logging shows application startup and configuration loading
 
 ---
 
@@ -206,8 +206,8 @@ Examples of foundational tasks (adjust based on your project):
 
 ```bash
 # Launch all tests for User Story 1 together (if tests requested):
-Task: "Create application main class in src/main/java/com/youssef/shortflix/ShortflixApplication.java"
-Task: "Create health check controller in src/main/java/com/youssef/shortflix/controller/HealthController.java"
+Task: "Create application main class in src/main/java/com/example/shortflix/ShortflixApplication.java"
+Task: "Create health check controller in src/main/java/com/example/shortflix/controller/HealthController.java"
 
 # Launch all configuration tasks for User Story 1 together:
 Task: "Add Spring Boot Starter Web dependency to pom.xml"

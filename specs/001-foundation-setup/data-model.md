@@ -5,7 +5,7 @@ The foundation phase focuses on infrastructure setup rather than business entiti
 
 ## Package Structure
 ```
-com/youssef/shortflix/
+com/example/shortflix/
 ├── config/         # Configuration classes
 ├── controller/     # REST controllers (handles HTTP requests)
 ├── service/        # Business logic layer
@@ -18,7 +18,7 @@ Although no entities are implemented in Phase 1, we establish the pattern for fu
 
 ### User Entity (Phase 2)
 ```java
-package com.youssef.shortflix.model;
+package com.example.shortflix.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
@@ -53,7 +53,7 @@ public class User {
 
 ### Movie Entity (Phase 3)
 ```java
-package com.youssef.shortflix.model;
+package com.example.shortflix.model;
 
 import jakarta.persistence.*;
 
@@ -86,7 +86,7 @@ public class Movie {
 
 ### Category Entity (Phase 3)
 ```java
-package com.youssef.shortflix.model;
+package com.example.shortflix.model;
 
 import jakarta.persistence.*;
 import java.util.Set;
@@ -110,7 +110,7 @@ public class Category {
 
 ### WatchHistory Entity (Phase 6)
 ```java
-package com.youssef.shortflix.model;
+package com.example.shortflix.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -139,10 +139,10 @@ public class WatchHistory {
 
 ## Repository Interfaces (Phase 3+)
 ```java
-package com.youssef.shortflix.repository;
+package com.example.shortflix.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.youssef.shortflix.model.User;
+import com.example.shortflix.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByEmail(String email);
@@ -152,7 +152,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 ## Configuration Classes (Phase 1)
 ```java
-package com.youssef.shortflix.config;
+package com.example.shortflix.config;
 
 import org.springframework.context.annotation.Configuration;
 

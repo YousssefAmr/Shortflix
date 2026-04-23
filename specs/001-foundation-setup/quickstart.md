@@ -89,13 +89,13 @@ find src/main/java -type d
 # Expected output:
 # src/main/java
 # src/main/java/com
-# src/main/java/com/youssef
-# src/main/java/com/youssef/shortflix
-# src/main/java/com/youssef/shortflix/config
-# src/main/java/com/youssef/shortflix/controller
-# src/main/java/com/youssef/shortflix/repository
-# src/main/java/com/youssef/shortflix/service
-# src/main/java/com/youssef/shortflix/model
+# src/main/java/com/example
+# src/main/java/com/example/shortflix
+# src/main/java/com/example/shortflix/config
+# src/main/java/com/example/shortflix/controller
+# src/main/java/com/example/shortflix/repository
+# src/main/java/com/example/shortflix/service
+# src/main/java/com/example/shortflix/model
 ```
 
 ## Troubleshooting
