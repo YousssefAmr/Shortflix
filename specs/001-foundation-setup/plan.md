@@ -1,13 +1,13 @@
-# Implementation Plan: Foundation Setup
+# Implementation Plan: [FEATURE]
 
-**Branch**: `001-foundation-setup` | **Date**: 2026-04-23 | **Spec**: [./spec.md](./spec.md)
-**Input**: Feature specification from `/specs/001-foundation-setup/spec.md`
+**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
+**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
 
 **Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/plan-template.md` for the execution workflow.
 
 ## Summary
 
-Initialize a Spring Boot backend application with proper project structure, database connectivity, and foundational infrastructure to support the Shortflix movie streaming platform.
+[Extract from feature spec: primary requirement + technical approach from research]
 
 ## Technical Context
 
@@ -43,7 +43,7 @@ Based on the Shortflix Constitution:
 ### Documentation (this feature)
 
 ```text
-specs/001-foundation-setup/
+specs/[###-feature]/
 ├── plan.md              # This file (/speckit.plan command output)
 ├── research.md          # Phase 0 output (/speckit.plan command)
 ├── data-model.md        # Phase 1 output (/speckit.plan command)
@@ -63,30 +63,47 @@ specs/001-foundation-setup/
 ```text
 # [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
 src/
-├── main/
-│   ├── java/
-│   │   └── com/youssef/shortflix/
-│   │       ├── config/
-│   │       ├── controller/
-│   │       ├── service/
-│   │       └── repository/
-│   └── resources/
-│       ├── application.properties
-│       └── schema.sql
-└── test/
-    ├── java/
-    │   └── com/youssef/shortflix/
-    │       ├── controller/
-    │       ├── service/
-    │       └── repository/
-    └── resources/
-        └── application-test.properties
+├── models/
+├── services/
+├── cli/
+└── lib/
+
+tests/
+├── contract/
+├── integration/
+└── unit/
+
+# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
+backend/
+├── src/
+│   ├── models/
+│   ├── services/
+│   └── api/
+└── tests/
+
+frontend/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── services/
+└── tests/
+
+# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
+api/
+└── [same as backend above]
+
+ios/ or android/
+└── [platform-specific structure: feature modules, UI flows, platform tests]
 ```
 
-**Structure Decision**: Selected Option 1: Single project (DEFAULT) structure. The Shortflix backend is a standalone Spring Boot application with standard Maven directory structure. Source code follows package-by-layer approach: config, controller, service, and repository packages under the main Java source directory.
+**Structure Decision**: [Document the selected structure and reference the real
+directories captured above]
 
 ## Complexity Tracking
 
 > **Fill ONLY if Constitution Check has violations that must be justified**
 
-No constitution check violations found that require complexity tracking.
+| Violation | Why Needed | Simpler Alternative Rejected Because |
+|-----------|------------|-------------------------------------|
+| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
+| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
